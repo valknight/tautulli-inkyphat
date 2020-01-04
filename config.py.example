@@ -1,3 +1,4 @@
 apikey = "yourkey"
 url = "http://your.tautulli.server:8181/baseurl/"
 colour = "yellow" # the InkyPHAT's colour
+mounted_upside_down = True
