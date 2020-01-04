@@ -1,0 +1,2 @@
+apikey = "yourkey"
+url = "http://your.tautulli.server:8181/baseurl/"
