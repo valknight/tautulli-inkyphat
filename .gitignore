@@ -2,4 +2,5 @@ images/
 *.pyc
 __pycache__/
 .vscode/
-config.py # MAKE YOUR OWN
+# MAKE YOUR OWN
+config.py
