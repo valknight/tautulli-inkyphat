@@ -5,9 +5,9 @@ from font_hanken_grotesk import HankenGroteskBold, HankenGroteskMedium
 from font_intuitive import Intuitive
 from inky import InkyPHAT, InkyWHAT
 from tautulli_graph import play_count_graph
+from config import colour
 # config
 mounted_upside_down = True
-colour = "yellow"
 strips = 5
 
 # Setup objects
