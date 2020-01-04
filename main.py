@@ -8,7 +8,6 @@ from tautulli_graph import play_count_graph
 from config import colour
 # config
 mounted_upside_down = True
-strips = 5
 
 # Setup objects
 inky_display = InkyPHAT(colour)
