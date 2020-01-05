@@ -4,7 +4,7 @@ from config import apikey, url
 
 api = "%sapi/v2?apikey=%s&cmd={cmd}" %(url, apikey)
 
-def get_play_count(days=3):
+def get_play_count(days=7):
     resp = requests.get(api.format(
         apikey=apikey, cmd="get_plays_by_date&time_range={}".format(days)))
     resp_j = json.loads(resp.content)
