@@ -17,6 +17,8 @@ def play_count_graph(days=7):
         x_data.append(0 - day_count)
         y_data.append(0)
         day_count += 1
+    # we do this as appending doesn't work great
+    x_data.reverse()
     # this merges all datapoints we have
     for series in data['series']:
         for x in range(0, len(series['data'])):
