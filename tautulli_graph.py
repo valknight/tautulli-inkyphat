@@ -5,9 +5,10 @@ import pandas as pd
 import os
 aspect_ratio = 212/104
 
-def play_count_graph():
+
+def play_count_graph(days=7):
     # get data from tautulli
-    play_count = get_play_count(days=7)
+    play_count = get_play_count(days=days)
     data = play_count['resp']['data']
     x_data = []
     y_data = []
@@ -22,14 +23,18 @@ def play_count_graph():
             y_data[x] += series['data'][x]
     generate_graph("play_count", x_data, y_data)
 
+
 def generate_graph(graph_name, x_data, y_data):
     fig, ax = plt.subplots()
     fig.set_size_inches(aspect_ratio*1.5, 1.5)
-    ax.plot(x_data, y_data)
+    ax.plot(x_data, y_data, color="black")
     ax.xaxis.set_visible(False)
     plt.grid()
     if not os.path.exists("images"):
         os.mkdir("images")
-    fig.savefig("images/{}.png".format(graph_name), bbox_inches='tight', pad_inches=0)
+    fig.savefig("images/{}.png".format(graph_name),
+                bbox_inches='tight', pad_inches=0)
 
-play_count_graph()
+
+if __name__ == '__main__':
+    play_count_graph()
